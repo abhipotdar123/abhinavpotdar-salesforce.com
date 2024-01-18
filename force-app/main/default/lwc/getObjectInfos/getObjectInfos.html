@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="getObjectInfos Adapter">
+        <div class="slds-var-p-around_medium">
+            <template if:true={objectInfos}>
+                <template for:each={objectInfos.results} for:item="obj">
+                    <div key={obj.objectApiName}>
+                        <div>Object API Name ::: {obj.objectApiName}</div>
+                        <div>defaultRecordTypeId ::: {obj.defaultRecordTypeId}</div>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

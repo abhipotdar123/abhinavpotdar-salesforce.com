@@ -1,0 +1,19 @@
+<template>
+    <div class="container">
+        <lightning-card title="Track Property" icon-name="standard:account">
+            Track Decorated Property Value : {customerName}
+        </lightning-card>
+
+        <lightning-card title="API Property" icon-name="standard:account">
+            API Decorated Property Value : {productName}
+        </lightning-card>
+
+        <lightning-card title="Common Property" icon-name="standard:account">
+            Common Property Value : {employeeName}
+        </lightning-card>
+        
+        <div>
+            <lightning-button label="Change Values" onclick={handleOnclick}></lightning-button>
+        </div>
+    </div>
+</template>

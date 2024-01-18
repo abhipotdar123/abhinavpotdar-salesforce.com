@@ -1,0 +1,22 @@
+<template>
+  <lightning-card title="System Administrator Users">
+      <div class="slds-p-around_medium">
+          <template if:true={users}>
+              <template for:each={users} for:item="user" key={user.Id}>
+                  <div class="clickable-block lgc-bg" key={user.Id} data-user-id={user.Id} data-user-name={user.Name} onclick={handleUserClick} onmouseover={handleMouseOver} onmouseout={handleMouseOut}>
+                      <lightning-tile label={user.Name} type="media">
+                          <lightning-avatar slot="media" src={user.AvatarUrl__c} fallback-icon-name="standard:person_account" alternative-text={user.Name}></lightning-avatar>
+                          <ul class="slds-list_horizontal slds-has-dividers_right">
+                              <li class="slds-item">{user.CommunityNickname}</li>
+                              <li class="slds-item">{user.Address.city}</li>
+                          </ul>
+                      </lightning-tile>
+                  </div>
+              </template>
+          </template>
+          <template if:false={users}>
+              No System Administrator users found.
+          </template>
+      </div>
+  </lightning-card>
+</template>

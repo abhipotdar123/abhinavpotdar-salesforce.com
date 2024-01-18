@@ -1,0 +1,76 @@
+<template>
+    <div class="main_container">
+        <div class="slds-context-bar navBar">
+            <div class="slds-context-bar__primary">
+                <div
+                    class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
+                    <div class="slds-context-bar__icon-action">
+                        <span class="slds-context-bar__label-action slds-context-bar__app-name textLogo_style">
+                            <span class="slds-truncate" title="App Name">Abhinav<span class="dot_Styles">.</span></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <nav class="slds-context-bar__secondary navMenu_Style" role="navigation">
+                <ul class="slds-grid slds-grid_customize">
+                    <li class="slds-context-bar__item slds-is-active">
+                        <a href="#" class="slds-context-bar__label-action" title="Menu Item" 
+                            onclick={handleScrollToHome}>
+                            <span class="slds-truncate" title="Menu Item">Home</span>
+                        </a>
+                    </li>
+                    <li class="slds-context-bar__item">
+                        <a href="#" class="slds-context-bar__label-action" title="Menu Item"
+                            onclick={handleScrollToAboutMe}>
+                            <span class="slds-truncate" title="Menu Item">About Me</span>
+                        </a>
+                    </li>
+                    <li class="slds-context-bar__item ">
+                        <a href="#" class="slds-context-bar__label-action" title="Menu Item">
+                            <span class="slds-assistive-text">Current Page:</span>
+                            <span class="slds-truncate" title="Menu Item">Contact Me</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Section -->
+        <div class="sub_Container" data-id="homePage_div">
+            <div class="profile_Box">
+                <h1 class="hero_title">
+                    <p>Hi, it's me Abhinav</p>
+                </h1>
+                <div class="hero_detail">
+                    <h2 class="logo">
+                        I am a <span class="dynamic_text"></span>
+                    </h2>
+                </div>
+                <div class="button_container">
+                    <button class="download_Button" role="button" onclick={handleDownloadResume}>{buttonLabel}
+                    </button>
+                    <button class="contactMe_Button" role="button" onclick={handleContactForm}>Contact Me
+                    </button>
+                </div>
+            </div>
+            <div class="profile_Box">
+                <div class="body_animated_div">
+                    <div class="bgimage">
+
+                    </div>
+                </div>
+            </div>
+            <div class="scroll_Button">
+                <h2 >Get To Know More About Me</h2>
+                <template if:true={isDown}>
+                    <img class="down_Button" src={scrollButton} onclick={handleScrollToAboutMe}/>
+                </template>
+                <span class="dynamic_Up_Button"></span>
+                <template if:true={isUp}>
+                    <img class="down_Button" src={scrollButton} onclick={handleScrollToHome}/>
+                </template>
+            </div>
+        </div>
+    </div>
+    <div class="aboutMe" data-id="aboutMe_div">
+    </div>
+</template>

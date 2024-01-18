@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Apex imperative with params Demo">
+        <div class="slds-p-around_medium">
+            <lightning-input type="search" onchange={searchHandler} label="Search Account" value={searchKey}>
+            </lightning-input>
+        </div>
+    </lightning-card>
+    <lightning-card title="Search Result">
+        <template if:true={accounts}>
+            <template for:each={accounts} for:item="account">
+                <div class="slds-box slds-box_xx-small" key={account.Id}>
+                    <p>Account Name     :: {account.Name}</p>
+                    <p>Account Type     :: {account.Type}</p>
+                    <p>Account Industry :: {account.Industry}</p>
+                </div>
+            </template>
+        </template>
+        <template if:true={isLoading}> <!-- Add a conditional rendering for the loading spinner -->
+            <div class="slds-p-around_medium">
+                <lightning-spinner variant="brand" size="medium"></lightning-spinner>
+            </div>
+        </template>
+    </lightning-card>
+</template>

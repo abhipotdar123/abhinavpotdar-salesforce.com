@@ -1,0 +1,36 @@
+<template>
+    <div class="main_container">
+        <div class={DisplayMode}>
+            <div class="header">
+                <a href="#default" class="logo">
+                    <div class={logo_Text}>I am a <span class="dynamic_text"></span></div>
+                </a>
+                <div class="header-right">
+                    <a class="active" href="#home">Home</a>
+                    <a onclick={handleProjectClick}>Project</a>
+                    <a href="#about">About</a>
+                </div>
+            </div>
+            <div class="showCase">
+                <template if:true={projectOpen}>
+                    <iframe src={fullUrl} height="900px" width="100%" sandbox='allow-same-origin allow-scripts allow-popups allow-forms'
+                        title="Project 1"></iframe>
+                        ABHINAV
+                </template>
+            </div>
+        </div>
+        
+        <div class="footerBody">
+            <footer class={footer_Background}>
+                <div class="new_footer_top">
+                    <div class="col-lg-3 col-md-6">
+                    </div>
+                    <div class="footer_bg">
+                        <div class="footer_bg_one"></div>
+                        <div class="footer_bg_two"></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</template>

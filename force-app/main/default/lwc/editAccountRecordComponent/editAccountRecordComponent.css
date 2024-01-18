@@ -1,0 +1,23 @@
+.container{
+    width: 1000px;
+    margin-top: 20px;
+    margin-left: 20px;   
+    margin-right: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.dark{
+    background-color: rgb(174, 171, 171);
+    color: white;
+}
+.lightMode{
+    background-color: rgb(197, 239, 250);
+    color: black;
+}
+lightning-input-field{
+    color: blue;
+}

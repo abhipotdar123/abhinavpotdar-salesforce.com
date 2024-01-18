@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Apex Method call Imperatively">
+        <div class="slds-p-around_medium">
+            <lightning-button variant="brand" label="Call Account Method" onclick={handleClick}></lightning-button>
+        </div>
+
+        <template if:true={accounts}>
+            <template for:each={accounts} for:item="account">
+                <div class="slds-box slds-box_xx-small" key={account.Id}>
+                    Name :: {account.Name}
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+</template>

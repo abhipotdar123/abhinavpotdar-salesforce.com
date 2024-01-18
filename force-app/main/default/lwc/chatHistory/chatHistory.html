@@ -1,0 +1,9 @@
+<template>
+    <div class="chat-history">
+        <template for:each={history} for:item="message">
+            <div key={message.id} class="message {message.type}">
+                <div class="message-content">{message.text}</div>
+            </div>
+        </template>
+    </div>
+</template>

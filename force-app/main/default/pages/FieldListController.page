@@ -1,0 +1,42 @@
+<apex:page controller="FieldListController">
+    <style>
+        /* CSS for table border */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <apex:pageBlock >
+        <table>
+            <tr>
+                <th>Field Label</th>
+                <th>Field Type</th>
+                <th>Picklist Values</th>
+            </tr>
+            <apex:repeat value="{!fieldInfo}" var="field">
+                <tr>
+                    <td>{!field.fieldLabel}</td>
+                    <td>{!field.fieldType}</td>
+                    <td>{!field.picklistValues}</td>
+                </tr>
+            </apex:repeat>
+        </table>
+        
+        <p>Total Count of Fields: {!totalCount}</p>
+        
+        <!-- Download Button -->
+        <a href="{!$Page.FieldListController}" download="YourFileName.xls">
+            <button>Download Excel</button>
+        </a>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="File Uploader">
+        <div class="slds-m-around_medium">
+            <!-- Picklist to select an object -->
+            <div class="slds-m-around_medium">
+                <lightning-combobox
+                    label="Select an Object"
+                    options={picklistOptions}
+                    placeholder="Select an object"
+                    onchange={handleObjectSelection}
+                ></lightning-combobox>
+            </div>
+
+            <!-- File Upload component -->
+            <lightning-file-upload
+                label="Upload Your File"
+                name="fileUploader"
+                accept={acceptedFormats}
+                record-id={myRecordId}
+                onuploadfinished={handleUploadFinished}
+                multiple
+            >
+            </lightning-file-upload>
+
+            <!-- Display selected object after selection (optional) -->
+            <div if:true={selectedObject} class="slds-m-top_medium">
+                Selected Object: {selectedObject}
+            </div>
+        </div>
+    </lightning-card>
+</template>

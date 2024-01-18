@@ -1,0 +1,82 @@
+<template>
+    <lightning-card>
+    <div class="section-fluid-main">
+        <div class="section-row">
+            <div class="section-col-2">
+                <div class="section">
+                    <p class="color-blue">Your current balance</p>
+                    <h3><span class="font-weight-500">$</span> 476.00</h3>
+                </div>
+            </div>
+            <div class="section-col-2">
+                <div class="section">
+                    <p class="color-yellow">Your credit limit</p>
+                    <h3><span class="font-weight-500">$</span> 50,000.00</h3>
+                </div>
+            </div>
+            <input class="date-btn date1" type="radio" id="date-1" name="date-btn" checked/>
+            <label for="date-1"><span>30 days</span></label>
+            <input class="date-btn date2" type="radio" id="date-2" name="date-btn"/>
+            <label for="date-2"><span>90 days</span></label>
+            <input class="date-btn date3" type="radio" id="date-3" name="date-btn"/>
+            <label for="date-3"><span>180 days</span></label>
+            <input class="date-btn date4" type="radio" id="date-4" name="date-btn"/>
+            <label for="date-4"><span>365 days</span></label>
+            <div class="section-col-1">
+                <div class="section">
+                    <div class="section-progress">
+                        <div class="income days-30">
+                            <div class="income-tooltip">
+                                <p>Income</p>
+                                <h6>$ 2,500.50</h6>
+                            </div>
+                        </div>
+                        <div class="expense days-30">
+                            <div class="expense-tooltip">
+                                <p>Expense</p>
+                                <h6>$ 1,350.90</h6>
+                            </div>
+                        </div>
+                        <div class="income days-90">
+                            <div class="income-tooltip">
+                                <p>Income</p>
+                                <h6>$ 4,100.98</h6>
+                            </div>
+                        </div>
+                        <div class="expense days-90">
+                            <div class="expense-tooltip">
+                                <p>Expense</p>
+                                <h6>$ 8,347.00</h6>
+                            </div>
+                        </div>
+                        <div class="income days-180">
+                            <div class="income-tooltip">
+                                <p>Income</p>
+                                <h6>$ 19,987.50</h6>
+                            </div>
+                        </div>
+                        <div class="expense days-180">
+                            <div class="expense-tooltip">
+                                <p>Expense</p>
+                                <h6>$ 5,208.42</h6>
+                            </div>
+                        </div>
+                        <div class="income days-365">
+                            <div class="income-tooltip">
+                                <p>Income</p>
+                                <h6>$ 24,1951.99</h6>
+                            </div>
+                        </div>
+                        <div class="expense days-365">
+                            <div class="expense-tooltip">
+                                <p>Expense</p>
+                                <h6>$ 1,882.71</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</lightning-card>
+</template>

@@ -1,0 +1,9 @@
+<template>
+    <div if:true={objectLimits}>
+        <p>Object Limit: {objectLimits.objectLimit}</p>
+        <p>Field Limit: {objectLimits.fieldLimit}</p>
+    </div>
+    <div if:false={objectLimits}>
+        <p>Loading object information...</p>
+    </div>
+</template>

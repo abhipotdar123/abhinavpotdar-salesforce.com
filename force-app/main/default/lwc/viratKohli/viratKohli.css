@@ -1,0 +1,12 @@
+.body{
+    background: #36256E;
+    backdrop-filter: blur(10.1px);
+    -webkit-backdrop-filter: blur(10.1px);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    /* border: 20px solid #E73493; */
+    /* border-image: url(/resource/1700991871000/virat/NavarasaBravery.png) repeat; */
+}

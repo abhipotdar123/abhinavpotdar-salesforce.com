@@ -1,0 +1,19 @@
+<template>
+    <div class="slds-box slds-theme_default">
+        <h2 class="slds-text-heading_medium">List of Bugs</h2>
+        <lightning-layout>
+            <lightning-layout-item size="4" padding="around-small">
+                <lightning-combobox
+                    name="recent-bugs"
+                    label="Recent Bugs"
+                    value={selectedBugId}
+                    options={recentBugs}
+                    onchange={handleChange}>
+                </lightning-combobox>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+    <template if:true={showAllBugs}>
+        <c-bug-paginator></c-bug-paginator>
+    </template>
+</template>

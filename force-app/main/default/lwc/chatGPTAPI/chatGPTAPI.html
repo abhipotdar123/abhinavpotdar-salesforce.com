@@ -1,0 +1,43 @@
+<template>
+    <div style="background-image: URL('/resource/JARVIS');">
+        <div style="padding: 20px; margin: 20px;">
+            <div class="slds-text-heading_medium">
+                <label for="input-text" class="input-label">Ask a question:</label>
+            </div>
+            <div class="chat-input">
+                <lightning-textarea id="input-text" name="input-text" class="input-text" value={inputText}
+                    onchange={handleInputChange} onkeypress={handleInputKeypress} label="Ask a question"
+                    placeholder="Type your question here..." maxlength="10000"
+                    style="resize: none; overflow: hidden;"></lightning-textarea>
+                <div class="slds-grid slds-wrap">
+                    <lightning-button variant="success" label="Send" title="Successful action" onclick={sendRequest}
+                        class="slds-m-right_large"></lightning-button>
+                    <div if:true={chatHistoryExists}>
+                        <lightning-button variant="neutral" label="Clear History" title="Clear chat history"
+                            onclick={handleClearHistory} class="slds-m-left_small slds-m-top_small"></lightning-button>
+                    </div>
+                </div>
+            </div>
+            <template if:true={isLoading}>
+                <div class="slds-m-top_large">
+                    <lightning-spinner variant="brand" size="medium" alternative-text="Loading"></lightning-spinner>
+                </div>
+            </template>
+            <div if:true={chatHistoryExists} class="chat-history">
+                <template for:each={chatHistory} for:item="message">
+                    <div key={message.id} class="message">
+                        <div class="message-content">
+                            <span class="bold-text"><b>YOU:</b></span> {inputText}
+                        </div>
+                        <div class="message-content">
+                            <span class="bold-text"><b>JARVIS:</b></span> {message.output}
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div class="chat-output">
+                <div class="output-text"></div>
+            </div>
+        </div>
+    </div>
+</template>

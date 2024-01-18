@@ -1,0 +1,55 @@
+<apex:page standardController="Lead" extensions="leadPercentageCompleted" tabStyle="Lead" standardStylesheets="true">
+    <apex:outputText value="{!Lead.FirstName}" rendered="false"/>
+    <apex:outputText value="{!Lead.Title}" rendered="false"/>
+    <apex:outputText value="{!Lead.MobilePhone}" rendered="false"/>
+    <apex:outputText value="{!Lead.Email}" rendered="false"/>
+    <apex:outputText value="{!Lead.Street}" rendered="false"/>
+    <apex:outputText value="{!Lead.City}" rendered="false"/>
+    <apex:outputText value="{!Lead.State}" rendered="false"/>
+    <apex:outputText value="{!Lead.PostalCode}" rendered="false"/>
+    <apex:outputText value="{!Lead.Country}" rendered="false"/>
+    <apex:outputText value="{!Lead.Website}" rendered="false"/>
+    <apex:outputField value="{!Lead.Street}" rendered="false"/>
+    <apex:outputField value="{!Lead.Company}" rendered="false"/>
+    <apex:form >
+    
+    <apex:outputPanel layout="block" style="background-color:#f3f3ec;">
+    <apex:panelGrid columns="2" border="0" cellpadding="0" cellspacing="0">
+        <apex:panelGroup style="font-size:11px">
+            <apex:panelGrid columns="1" border="0" cellpadding="0" cellspacing="2" style="font-weight:bold;text-align:right">
+                <apex:outputText value="Completed" style="font-weight:bold;"/>
+                <apex:outputText value="Last Activity Date" style="font-weight:bold;white-space:nowrap;" styleClass="labelCol"/>
+                <apex:outputText value="Next Activity Date" style="font-weight:bold;"/>
+                <apex:outputText value="Trading Cycle" style="font-weight:bold;"/>
+                <!--apex:outputText value="FY Wallet Size" style="font-weight:bold;"/--><!-- 09-Oct-2018 - Puneet Saxena - SF-809 - Commented code to deprecate FY_Wallet_Size_Volume__c field-->
+                <apex:outputText value="Industry" style="font-weight:bold;"/>
+                <apex:outputText value="Primary Competitor" style="font-weight:bold;"/>
+            </apex:panelGrid>
+        </apex:panelGroup>
+        <apex:panelGroup style="font-size:11px">
+            <apex:panelGrid columns="1" border="0" cellpadding="0" cellspacing="2" style="text-align:left">        
+            <apex:outputPanel id="row1">
+                <apex:outputLink value="/apex/LeadKeyDetails?id={!Lead.Id}" target="_top">
+                    <apex:outputText value="Key: {!leadPercentageScore}%" style="color:{!leadPercentageColor};font-weight:bold;"/>
+                </apex:outputLink>            
+            </apex:outputPanel>
+            <apex:outputPanel id="row2">
+                <apex:outputText value="{!Lead.LastActivityDate} " rendered="{!NOT(ISNULL(Lead.LastActivityDate))}"/>
+                <apex:outputText value="None" styleClass="labelCol" rendered="{!ISNULL(Lead.LastActivityDate)}"/>
+                <apex:outputText value=" > 90 Days " style="white-space:nowrap;" styleClass="labelCol" rendered="{!NOT(ISNULL(Lead.LastActivityDate))}"/>
+                &nbsp;
+                <apex:image height="12px" width="12px" value="{!IF(OR(ISNULL(Lead.LastActivityDate),Lead.LastActivityDate < TODAY() - 90), '/img/samples/flag_red.gif', '/img/samples/flag_green.gif')}"/>
+            </apex:outputPanel>
+            
+                <!-- 09-Oct-2018 - Puneet Saxena - SF-809 - Commented below code to deprecate FY_Wallet_Size_Volume__c field-->
+            <!--apex:outputPanel id="row5">
+                <apex:outputField value="{!Lead.FY_Wallet_Size_Volume__c}"/>
+            </apex:outputPanel-->
+                                                                                      
+            </apex:panelGrid>
+        </apex:panelGroup>     
+    </apex:panelGrid>
+    <BR/><BR/><BR/>
+    </apex:outputPanel>
+    </apex:form>
+</apex:page>

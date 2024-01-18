@@ -1,0 +1,9 @@
+<apex:page >
+  <script>
+      if(true){
+        var fullName = 'Abhinav Potdar' ;
+      }
+
+      console.log(fullName);
+  </script>
+</apex:page>

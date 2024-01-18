@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="getObjectInfo Adapter">
+        <div class="slds-var-p-around_medium">
+            <template if:true={shouldRenderContent}>
+                <div> DefaultRecordTypeId :: {defaultRecordTypeId}</div>
+                <div> Object API Name :: {ObjectName}</div>
+                <b>...... CONDITION SATISFIED ......</b>
+            </template>
+            <template if:false={shouldRenderContent}>
+                <div> Error Occured </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

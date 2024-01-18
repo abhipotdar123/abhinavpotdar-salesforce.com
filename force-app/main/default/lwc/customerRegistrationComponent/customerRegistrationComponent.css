@@ -1,0 +1,21 @@
+/* .box {
+    width: 550px;
+    height: 1200px;
+    border: 2px solid black;
+    margin-left: 700px;
+    margin-top: 100px;
+    background-color: cadetblue;
+  } */
+
+.form{
+    width: 500px;
+    border: 2px solid black;
+    margin-left: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(239, 236, 236);
+}

@@ -1,0 +1,31 @@
+<template>
+    <div>
+        <lightning-input 
+            label="Enter the Search Content"
+            name="lblSearch"
+            placeholder="Enter search Text"
+            value={searchText}
+            onchange={handleOnChange}>
+        </lightning-input>
+        <br/>
+        <lightning-button
+            label = "Click Me"
+            name = "btnClickMe"
+            variant="brand"
+            onclick={handleOnClick}>
+        </lightning-button><br/><br/>
+        
+        <lightning-button 
+                        label="Search Records"
+                        name="btnSearch"
+                        variant="brand"
+                        onclick={getButtonDetails}>            
+        </lightning-button> &nbsp;&nbsp;
+        <lightning-button 
+                        label="Show Records"
+                        name="btnShow"
+                        variant="brand"
+                        onclick={getButtonDetails}>            
+        </lightning-button>
+    </div>
+</template>

@@ -1,0 +1,12 @@
+/* styles.css */
+.slds-card__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .slds-card {
+    margin: 10px;
+    width: 400px;
+    height: 500px;
+  }

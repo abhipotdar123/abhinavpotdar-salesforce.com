@@ -1,0 +1,23 @@
+<aura:component implements="force:lightningQuickAction">
+    <aura:attribute name="firstName" type="String" />
+    <aura:attribute name="lastName" type="String" />
+    <aura:attribute name="email" type="String" />
+    <aura:attribute name="phone" type="String" />
+    <aura:attribute name="checkboxValue" type="Boolean" default="false" />
+
+    <lightning:input type="String" label="Enter First Name" value="{!v.firstName}" />
+    <lightning:input type="String" label="Enter Last Name" value="{!v.lastName}" />
+    <lightning:input type="Email" label="Email" value="{!v.email}" />
+    <lightning:input pattern="[0-9]{10}" type="Phone" label="Phone" value="{!v.phone}" />
+    <ui:inputCheckbox aura:id="checkbox" label="Select?" change="{!c.onCheck}" value="{!v.checkboxValue}" />
+
+    <br/><br/>
+    Entered First Name: {!v.firstName}<br/> 
+    Entered Last Name : {!v.lastName}<br/>
+    Entered Email     : {!v.email}<br/>
+    Entered Phone     : {!v.phone}<br/>
+    Checkbox Value    : {!v.checkboxValue}<br/>
+
+    <lightning:button label="New Contact" variant="neutral" onclick="" iconName="utility:save" />
+    <br/>
+</aura:component>

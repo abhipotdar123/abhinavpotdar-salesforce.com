@@ -1,0 +1,45 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-around_medium">
+            <lightning-combobox name="progress" label="Select the object" value={value} placeholder="SELECT THE OBJECT"
+                options={options} onchange={handleChange}>
+            </lightning-combobox>
+            <p>Selected value is: {value}</p>
+        </div>
+
+        <template if:true={isAccount}>
+            <div style="height: 300px;">
+                <lightning-datatable
+                    key-field="Id"
+                    data={Data}
+                    columns={columns}>
+                </lightning-datatable>
+            </div>
+            <p>Account Table is Here</p>
+        </template>
+
+        <template if:true={isContact}>
+            <div style="height: 300px;">
+                <lightning-datatable
+                    key-field="Id"
+                    data={Data}
+                    columns={columns}>
+                </lightning-datatable>
+            </div>
+            <p>Contact Table is Here</p>
+        </template>
+
+        <div class="slds-m-around_medium">
+            <lightning-button label="Reset" onclick={handleReset}></lightning-button>
+        </div>
+
+        <template if:true={isDownload}>
+            <div class="slds-m-around_medium">
+                <button class="slds-button slds-button_neutral" onclick={handleDownload}>
+                    <lightning-icon icon-name="utility:download" size="small"></lightning-icon>
+                    Download Excel
+                </button>
+            </div>
+        </template>
+    </lightning-card>
+</template>

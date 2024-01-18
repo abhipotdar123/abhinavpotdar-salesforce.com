@@ -1,0 +1,19 @@
+<template>
+    <div class="container">
+        <lightning-input label="Enter Search Text" 
+                placeholder="Search Account Name" 
+                value={searchText}
+                onchange={onHandleChange}></lightning-input>
+        <br/>
+        <lightning-button label="Search Accounts" icon-name="utility:search" icon-position="right" onclick={getAccountsList}></lightning-button>
+
+        <template for:each={accountRecordsList} for:item="acc">
+            <lightning-card key={acc.Name} icon-name="standard:account">
+                <b>Account Name: </b>{acc.Name} <br/>
+                <b>Account Id: </b>{acc.Id} <br/>
+                <b>Industry: </b>{acc.Industry}<br/>
+
+            </lightning-card>
+        </template>
+    </div>
+</template>

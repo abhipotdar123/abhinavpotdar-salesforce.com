@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable" >
+    <!--Card-->
+    <lightning:card title="Salesforce" footer="Card Footer">
+        <p>About Lightning Experience</p>
+        
+        <p>It's time to bring together your Salesforce knowledge and familiarity with standard technologies like HTML, JavaScript, and CSS to build the 
+            next generation of Salesforce apps. Use these common standards to build components for your Salesforce org while maintaining compatibility with existing Aura components.
+        </p>
+        <ul class="slds-list_dotted">
+            <li><b>Lightning includes these technologies</b></li>
+            <ul class="slds-is-nested" style="list-style-type:circle">
+            	<li>Lightning Aura</li>
+	            <li>Lightning Web Component</li>
+            </ul>
+        </ul>
+    </lightning:card>
+</aura:component>

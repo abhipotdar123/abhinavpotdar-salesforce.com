@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Related Records of Account">
+        <div class="slds-p-around_medium">
+            <template if:true={users}>
+                <div class="clickable-block lgc-bg" key={users.Id} data-user-id={users.Id} data-user-name={users.Name} onclick={handleUserClick} onmouseover={handleMouseOver} onmouseout={handleMouseOut}>
+                    <lightning-tile label={users.Name} type="media">
+                        <lightning-avatar slot="media" src={users.AvatarUrl__c} fallback-icon-name="standard:person_account" alternative-text={users.Name}></lightning-avatar>
+                        <ul class="slds-list_horizontal slds-has-dividers_right">
+                            <li class="slds-item">{users.CommunityNickname}</li>
+                            <li class="slds-item">{users.Address.city}</li>
+                        </ul>
+                    </lightning-tile>
+                </div>
+            </template>
+            <template if:false={users}>
+                No System Administrator users found.
+            </template>
+            <div>
+                <lightning-combobox
+                    name="progress"
+                    label="Status"
+                    value={value}
+                    placeholder="Select Progress"
+                    options={options}
+                    onchange={handleChange}
+                ></lightning-combobox>
+                <p>Selected Account Id: {selectedAccountId}</p>
+            </div>
+        </div>
+    </lightning-card>
+    <div>
+        <template if:true={selectedAccountId}>
+            <c-related-contacts-table account-id={selectedAccountId}></c-related-contacts-table>
+        </template>
+    </div>
+</template>

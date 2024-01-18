@@ -1,0 +1,32 @@
+.button {
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;
+}
+
+.cadetblue {
+    background: cadetblue;
+}
+
+.orange {
+    background: orange;
+}
+
+.violet {
+    background: violet;
+}
+
+.yellow {
+    background: yellow;
+}
+
+.canvas {
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+}
+
+span {
+    display: block;
+}

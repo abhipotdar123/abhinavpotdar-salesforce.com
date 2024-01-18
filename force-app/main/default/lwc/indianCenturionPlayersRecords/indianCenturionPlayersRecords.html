@@ -1,0 +1,66 @@
+<template>
+    <div class="body">
+     <nav>
+      <img src={BRAND_PALETTE} alt="Brand Palette">
+     </nav>
+     <template if:true={isFirstPage}>
+      <div class="slds-p-top_large slds-m-around_medium">
+       <h1 class="slds-text-title_caps">Indian Players Century Records</h1>
+       <br />
+       <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_2-of-3 container">
+         <div class="card" onclick={handleCardClick}>
+          <img class="virat_Styling" src={VIRAT_WITH_BAT} alt="Virat with Bat"/>
+          <div class="slds-text-align_center slds-text-heading_small aboutVirat_styling">
+           <p>Virat Kohli</p>
+           <p>5 November 1988</p>
+           <p>ODI Debut on 18 August 2008 against Sri Lanka</p>
+           <p>T20 Debut on 12 June 2010 against Zimbabwe</p>
+           <p>Test Debut on 20 June 2011 against West Indies</p>
+          </div>
+         </div>
+         <div class="card">
+          <h2 class="title_styling">MS Dhoni</h2>
+          <img class="timeZone_styling" src={timeZoneImage} alt="Clock Logo" />
+          <div class="project_info">
+           <p>This app is used to know the local time of team Members</p>
+           <p>We have team members all over the world</p>
+          </div>
+         </div>
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+         <img class="bcci_logo__styling" src={BCCI_LOGO} alt="BCCI Logo">
+        </div>
+       </div>
+      </div>
+     </template>
+     <template if:true={viratPage}>
+      <div class="playerCard slds-p-around_large">
+       <div class="slds-grid slds-wrap">
+        <template if:true={playersRecords}>
+         <template for:each={playersRecords} for:item="con" for:index="index">
+          <div class="slds-col slds-size_1-of-4" key={con.Century_No__c}>
+           <div class="slds-card__grid slds-wrap card__Sizing" data-id="myDiv">
+            <div class="slds-card slds-card_narrow slds-card_focus">
+             <div class="slds-card__header slds-card__header_border-bottom">
+              <div class="slds-card__title">
+               <div class="slds-truncate"><a href="#">
+                <h2>Century Number {con.Century_No__c}</h2>
+               </a></div>
+              </div>
+             </div>
+             <div class="slds-card__body">
+              <p>{con.Match_Date__c}</p>
+              {VIRAT_IMAGE}
+              <img src="" alt="">
+             </div>
+            </div>
+           </div>
+          </div>
+         </template>
+        </template>
+       </div>
+      </div>
+     </template>
+    </div>
+   </template>

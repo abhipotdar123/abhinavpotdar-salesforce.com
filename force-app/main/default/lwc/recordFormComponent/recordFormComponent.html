@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Create New Bug">
+        <lightning-record-form
+            object-api-name={objectName}
+            fields={fields}
+            onsuccess={successHandler}
+            onsubmit={handleSubmit}
+            columns="2"
+            ></lightning-record-form>
+    </lightning-card>
+</template>

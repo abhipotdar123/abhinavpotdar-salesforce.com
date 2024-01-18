@@ -1,0 +1,21 @@
+<template>
+    <div class="div1">
+        <lightning-button-group>
+            <lightning-button label="New Contact" name="btnContact" variant="neutral"></lightning-button>
+            <lightning-button label="New Case" name="btnCase" variant="neutral"></lightning-button>
+            <lightning-button label="New Note" name="btnNote" variant="neutral"></lightning-button>
+            <lightning-button label="Refresh" name="refresh" variant="neutral" disabled="true"></lightning-button>
+            <lightning-button-menu alternative-text="Select the Menu Item" menu-alignment="left" >
+                    <lightning-menu-item label="New Opportunity" value="oppty"></lightning-menu-item>
+                    <lightning-menu-item label="Change Owner" value="chngOwner"></lightning-menu-item>
+                    <lightning-menu-item label="Check for New Data" value="newData"></lightning-menu-item>
+                    <lightning-menu-item label="Submit For Approval" value="approval"></lightning-menu-item>
+                    <lightning-menu-item label="Edit" value="edit"></lightning-menu-item>
+                    <lightning-menu-item label="Delete" value="delte"></lightning-menu-item>
+                    <lightning-menu-item label="Sharing" value="sharing"></lightning-menu-item>
+                    <lightning-menu-item label="View Account History" value="history"></lightning-menu-item>
+                    <lightning-menu-item label="View Website" value="website"></lightning-menu-item>
+            </lightning-button-menu>
+        </lightning-button-group>
+    </div>
+</template>

@@ -1,0 +1,29 @@
+<template>
+    <div class="box">
+        <div class="form">
+            <center><u><b>Customer Registration form</b></u></center><br/><br/>
+            <lightning-input label="Enter First Name" placeholder="First Name" type="text" required="true"></lightning-input>
+            <lightning-input label = "Enter Last Name" placeholder="Last Name" type="text"></lightning-input>
+            <lightning-input label = "Enter Contact Address" placeholder="Contact Address" type="text" name="address"></lightning-input>
+            <lightning-input label = "Enter City Name" placeholder="City Name" type="text" name="cityName" required="true"></lightning-input>
+            <lightning-combobox label="Select the Country Name"
+                                placeholder="Select the Sountry"
+                                options={countryNames}
+                                value={selectedCountryName}></lightning-combobox>
+            <lightning-input label = "Enter Postal / Zip Code" placeholder="Postal Code" type="text"></lightning-input>
+            <lightning-input label = "Enter Contact Number" placeholder="Contact Number" type="tel" required="true"></lightning-input>
+            <lightning-input label = "Enter Email Address" placeholder="Email Address" type="email" required="true"></lightning-input>
+            <lightning-input label = "Enter Current Employer" placeholder="Company Name" type="text" required="true"></lightning-input>
+            <lightning-input label = "Enter your Age" type="number" placeholder="Age" min="20" max="50" required="true"></lightning-input>
+            <lightning-input label = "Enter User ID" type="text" placeholder="User ID" required="true" max-length="20"></lightning-input>
+            <lightning-input label = "Enter Password" type="password" placeholder="Enter Password" max-length="20"></lightning-input>
+            <lightning-input label = "Enter Confirm Password" type="password" placeholder="Confirm Password" max-length="20"></lightning-input>
+            <lightning-input label="Join Our Mailing List" type = "checkbox"  checked="false"></lightning-input>
+            <lightning-input label="Enter Date Of Birth" type = "date" ></lightning-input>
+            <lightning-input label="Select the Profile" type = "file" name="file" multiple="true" accept=".doc,.docx,.pdf"></lightning-input>
+            <lightning-input label="select the color" type = "color" name="color" ></lightning-input>
+            <lightning-input label="Follow News Letters" type = "checkbox-button"  title="Follow News Letters"></lightning-input>
+            <lightning-input label="Send Updates" type = "toggle"  title="Send Updates"></lightning-input>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,14 @@
+<template>
+    <div class="container">
+        <lightning-card title="Reactive Property Demo">
+            <div class="box">
+                <lightning-input label="Show Custom Message"
+                                placeholder="Reactive Property"
+                                value={customMessage}
+                                onchange={handleOnChange}>
+                </lightning-input><br/>
+                <h1>Message is....: {customMessage}</h1> 
+            </div>
+        </lightning-card>
+    </div>
+</template>

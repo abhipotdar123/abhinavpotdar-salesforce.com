@@ -1,0 +1,57 @@
+<template>
+    <div>
+        <center><u><h1>Basic Calculator</h1></u></center>
+        <lightning-input 
+            label = "Enter First Number"
+            name =  "firstNumber"
+            placeholder = "First Number"
+            onchange = {handleOnChange}
+            value = {firstNumber}>
+        </lightning-input><br/>
+
+        <lightning-input 
+            label = "Enter Second Number"
+            name =  "secondNumber"
+            placeholder = "Second Number"
+            onchange = {handleOnChange}
+            value = {secondNumber}>
+        </lightning-input><br/>
+        
+        <lightning-input 
+            label = "Operation Result"
+            name =  "result"
+            placeholder = "Result Value"
+            value={operationResult}>
+        </lightning-input><br/>
+        
+        <lightning-button
+            label = "Addition"
+            variant = "brand"
+            onclick={doAddition}>
+        </lightning-button> &nbsp;
+
+        <lightning-button
+            label = "Subtraction"
+            variant = "brand"
+            onclick={doSubtraction}>
+        </lightning-button> &nbsp;
+
+        <lightning-button
+            label = "Multiplication"
+            variant = "brand"
+            onclick={doMultiplication}>
+        </lightning-button> &nbsp;
+
+        <lightning-button
+            label = "Division"
+            variant = "brand"
+            onclick={doDivision}>
+        </lightning-button> &nbsp;
+        
+        <lightning-button
+            label = "Modulus"
+            variant = "brand"
+            onclick={doModulus}>
+        </lightning-button> &nbsp;
+    </div>
+</template>

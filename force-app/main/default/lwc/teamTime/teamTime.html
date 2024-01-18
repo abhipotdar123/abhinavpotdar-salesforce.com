@@ -1,0 +1,42 @@
+<template>
+  <div class="body">
+    <div class="container">
+      <div class="slds-border_bottom slds-m-top_none slds-align_absolute-center" style="height:2rem">
+        <p>Your Locale Time</p> &nbsp;&nbsp;
+        <div class="p1"><strong>{usersCurrentTime}</strong></div>
+      </div>
+      <div class="inner-container">
+        <div class="slds-text-body_small">
+          <lightning-combobox name="userList" label="User List" value={selectedUser} placeholder="Select the User"
+            options={userRecords} onchange={handleChange} class="combobox-label-size">
+          </lightning-combobox>
+        </div>
+        <div class="inner-container">
+        <template if:true={loadProfileCard}>
+          <div class="inner-container profile-card profile-card-container">
+            <span class={statusColor}>{statusOfUser}</span>
+            <div class="profile-initials-Image, logo"></div>
+            <div if:true={initial}>
+              <img class="profile-logo-resize" src={profileLogo} alt="user" />
+            </div>
+            <h3>{nameField}</h3>
+            <h6>{cityName}</h6>
+            <h3 class={textColor}>{emailField}</h3>
+            <div class="time-strip">
+              <span>{selectedUsersTime}</span>
+            </div>
+            <div class="skill-section">
+              <h6>Skills</h6>
+              <ul>
+                <template for:each={usersSkills} for:item="item">
+                  <li key={item}>{item}</li>
+                </template>
+              </ul>
+            </div>
+          </div>
+        </template>
+      </div>
+      </div>
+    </div>
+  </div>
+</template>

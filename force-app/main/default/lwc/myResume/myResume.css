@@ -1,0 +1,405 @@
+.main_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    color: aliceblue;
+}
+
+.slds-context-bar {
+    border-bottom: 3px solid rgb(209, 64, 20);
+}
+
+.slds-context-bar.navBar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.textLogo_style {
+    font-size: 30px;
+    font-family: "customFont", sans-serif;
+    font-weight: 100;
+}
+
+.dot_Styles {
+    color: rgb(209, 64, 20);
+    font-size: xx-large;
+}
+
+.navMenu_Style {
+    position: fixed;
+    right: 0;
+}
+
+.slds-grid_customize {
+    position: absolute;
+    right: 0;
+    height: 35px;
+}
+
+.bgimage {
+    background-image: url(/resource/myBackground2);
+    background-size: cover;
+    width: 750px;
+    height: 750px;
+    filter: brightness(90%);
+    background-position: -85px -25px;
+}
+
+.bgimage:hover {
+    opacity: 0.7;
+}
+
+.image_Alignment_center {
+    position: relative;
+    left: 10%;
+}
+
+.container-fluid {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.body_animated_div {
+    display: flex;
+    width: 700px;
+    height: 700px;
+    margin-top: 45px;
+    margin-left: 50px;
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+    animation: morphing-c-myResume_myResume 10s infinite;
+    overflow: hidden;
+}
+
+.body_animated_div:hover {
+    animation-play-state: paused;
+}
+
+@keyframes morphing {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% box-shadow 15px 15px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    25% {
+        border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    }
+
+    50% {
+        border-radius: 50% 50% 33% 67% / 55% 27% 73% 45% box-shadow -10px -5px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    75% {
+        border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    }
+}
+
+/* Font Import */
+@font-face {
+    font-family: "customFont";
+    src: url("/resource/Ubuntu/Ubuntu-Regular.ttf") format("TrueType");
+}
+
+
+/* Text Animation */
+.body_container {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.wrapper_container {
+    box-sizing: content-box;
+    display: flex;
+    position: absolute;
+    top: 55%;
+    transform: translateX(0%) translateY(-30%);
+    text-align: center;
+    left: 13%;
+}
+
+.dynamic_text {
+    font-size: 18px;
+    color: rgb(209, 64, 20);
+}
+
+/*Logo Transition*/
+.logo-container {
+    position: absolute;
+    left: 15%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    opacity: 0;
+    animation-iteration-count: infinite;
+}
+
+.logo1 {
+    animation: slide-up-1 4s ease 0s forwards running;
+}
+
+.logo2 {
+    animation: slide-up-2 4s ease 4s forwards running;
+}
+
+.logo3 {
+    animation: slide-up-3 4s ease 8s forwards running;
+}
+
+@keyframes slide-up-1 {
+    0% {
+        top: 20px;
+        opacity: 0;
+    }
+
+    50% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        top: -20px;
+        opacity: 0;
+    }
+}
+
+@keyframes slide-up-2 {
+    0% {
+        top: 20px;
+        opacity: 0;
+    }
+
+    50% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        top: -20px;
+        opacity: 0;
+    }
+}
+
+@keyframes slide-up-3 {
+    0% {
+        top: 20px;
+        opacity: 0;
+    }
+
+    50% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        top: -20px;
+        opacity: 0;
+    }
+}
+
+/*****************************************************************
+                        Home Page
+******************************************************************/
+.sub_Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    position: relative;
+    gap: 20px;
+}
+
+.profile_Box {
+    width: 800px;
+    height: 800px;
+    border: 0px solid black;
+}
+
+.hero_title {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    font-size: 64px !important;
+    font-family: "customFont", sans-serif;
+    font-weight: 650;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    top: 40%;
+    left: 18%;
+}
+
+.hero_title p:hover {
+    background-color: #ddd;
+    color: black;
+
+}
+
+.hero_detail {
+    position: relative;
+    box-sizing: content-box;
+    display: flex;
+    color: black;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    top: 40%;
+    left: 18%;
+    background-color: var(--main-container-background-color);
+}
+
+.hero_detail h2 {
+    float: left;
+    color: black;
+    font-family: tahoma, serif;
+    font-size: 23px;
+    border-radius: 4px;
+    padding-left: 2px;
+}
+
+.hero_detail h2:hover {
+    background-color: #ddd;
+}
+
+/*****************************************************************
+                        Download Button
+******************************************************************/
+.button_container {
+    position: relative;
+    top: 42%;
+    left: 18%;
+}
+
+.download_Button {
+    background-color: #fff;
+    border: 2 solid #040404;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 1rem 1.8rem;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.download_Button:hover {
+    color: #ffffff;
+    background-color: rgb(209, 64, 20);
+}
+
+@media (min-width: 768px) {
+    .download_Button {
+        font-size: 1.125rem;
+        padding: 1rem 2rem;
+    }
+}
+
+/*****************************************************************
+                        Contact Me Button
+******************************************************************/
+
+.contactMe_Button {
+    position: relative;
+    left: 3%;
+    background-color: #202d2b;
+    border: 2 solid #4d5460;
+    border-radius: 2rem;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    touch-action: manipulation;
+}
+
+.contactMe_Button:hover {
+    background-color: #689ec0;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .contactMe_Button {
+        font-size: 1.125rem;
+        padding: 1rem 2rem;
+    }
+}
+
+/*****************************************************************
+                Get To Know More About Me Scroll
+******************************************************************/
+
+.scroll_Button {
+    position: absolute;
+    top: 90%;
+    left: 21%;
+    color: #a8a5a5;
+    font-family: tahoma, serif;
+    font-size: 18px;
+}
+.scroll_Button:hover {
+    color: #000000;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+     }
+}
+
+.down_Button{
+    color: #a8a5a5;
+    max-height: 45px;
+    position: absolute;
+    left: 39%;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.down_Button:hover {
+    color: #a8a5a5;
+}
+/*****************************************************************
+                        ABOUT ME
+******************************************************************/
+.aboutMe {
+    color: rgb(255, 255, 255);
+    background-color: var(--main-container-background-color);
+    text-align: center;
+    text-decoration: none;
+    font-family: tahoma, serif;
+    font-size: 23px;
+    border-radius: 4px;
+    padding-left: 2px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}

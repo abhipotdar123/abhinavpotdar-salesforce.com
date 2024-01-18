@@ -1,0 +1,10 @@
+<aura:component >
+	Hi... I am Abhinav
+    this is my first Aura Component
+    I have experience in 
+	<ul>
+    	<li>Salesforce Admin</li>
+        <li>Salesforce Development</li>
+        <li>Integration</li>
+    </ul>
+</aura:component>

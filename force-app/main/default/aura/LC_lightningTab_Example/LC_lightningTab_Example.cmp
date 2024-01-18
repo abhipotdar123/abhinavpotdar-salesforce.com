@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable">
+    <lightning:card title="Hello" footer="Card Footer">
+        <div class="slds-m-left_medium">
+        <b>About Farmer</b>
+        <p>Farming, often regarded as the backbone of our society, represents the unyielding determination and hard work of individuals who dedicate their lives to cultivating the land. Farmers play a crucial role in providing us with the food we consume, ensuring food security for communities worldwide. In this essay, we will explore the daily challenges, the significance of their work, and the indomitable spirit that defines the life of a farmer.</p>
+        <ul class="slds-list_dotted">
+            <li>History</li>
+            <li>Types</li>
+            <ul class="slds-is-nested" style="list-style-type:circle">
+                <li>Income</li>
+                <li>References</li>
+                <li>External Links</li>
+            </ul>
+        </ul>
+        </div>
+    </lightning:card>
+</aura:component>

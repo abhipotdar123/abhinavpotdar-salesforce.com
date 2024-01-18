@@ -1,0 +1,19 @@
+<template>
+    <div class="container">
+        <lightning-card title="Search Case Records" icon-name="standard:case">
+            <lightning-input label="Enter Search Status"
+                             placeholder="Enter Case Status"
+                             value={caseStatus}
+                             onchange={handleCaseStatusChange} 
+                            ></lightning-input> <br/>
+            <lightning-button 
+                            label="Search Cases" 
+                            onclick={handleSearchCases}
+                            ></lightning-button><br/><br/>
+            <lightning-datatable 
+                            key-field="id"
+                            columns={columns}
+                            data={caseRecords}></lightning-datatable>
+        </lightning-card>
+    </div>
+</template>

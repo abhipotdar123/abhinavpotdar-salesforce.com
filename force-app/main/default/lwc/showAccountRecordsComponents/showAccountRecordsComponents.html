@@ -1,0 +1,9 @@
+<template>
+    <div class="container"> 
+    <template for:each={accountRecords} for:item="acc">
+        <lightning-card key={acc.Name} icon-name="standard:account">
+            <p>{acc.Name}</p>
+        </lightning-card>
+    </template>
+</div>
+</template>

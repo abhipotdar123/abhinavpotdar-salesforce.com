@@ -1,0 +1,31 @@
+<template>
+  <div>
+    <lightning-card title="Exchange Rate Calculator" variant="narrow" class="slds-card_boundary">
+      <div class="slds-m-around_medium">
+        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; background-color: rgb(120, 201, 251); padding: 1rem;">
+          <lightning-combobox label="From" name="Select your From Currency" value={fromCurrency}
+            options={CurrencyOptions} onchange={handleFromCurrencyChange}></lightning-combobox>
+
+          <lightning-combobox label="To" name="Select your To Currency" value={toCurrency} options={CurrencyOptions}
+            onchange={handleToCurrencyChange}></lightning-combobox>
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-top: 1rem;">
+          <lightning-input label="Enter Amount" type="number" name="amount" value={amount} onchange={handleAmountChange}></lightning-input>
+          <lightning-button label="Calculate Exchange Rate" onclick={handleSubmit}></lightning-button>
+        </div>
+        {convertedAmount}
+        <!--template if:true={convertedAmount}>
+          <div class="slds-m-top_medium">
+            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+              <lightning-output-field label="Total Amount" value={convertedAmount}></lightning-output-field>
+              <div style="margin-left: 1rem;">
+                <lightning-button label="Clear" onclick={handleClear}></lightning-button>
+              </div>
+            </div>
+          </div>
+        </template-->
+      </div>
+    </lightning-card>
+  </div>
+</template>

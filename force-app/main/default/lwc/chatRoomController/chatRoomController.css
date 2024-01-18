@@ -1,0 +1,31 @@
+.lgc-bg {
+    background-color: rgb(110, 108, 108);
+}
+
+.lgc-bg-inverse {
+    background-color: rgb(22 50 92);
+}
+
+/* Add styles for the clickable block */
+.clickable-block {
+    cursor: pointer;
+    border: 2px solid #3498db; /* Change to the desired border color */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(242, 242, 242); /* Change to the desired background color */
+}
+
+/* Styles for when the block is clicked */
+.clicked {
+    background-color: #e74c3c; /* Change to the desired background color when clicked */
+    border-color: #c0392b; /* Change to the desired border color when clicked */
+    color: #fff; /* Change to the desired text color when clicked */
+}
+
+/* Hover effect styles */
+.clickable-block:hover {
+    background-color: #f1c40f; /* Change to the desired background color on hover */
+    border-color: #f39c12; /* Change to the desired border color on hover */
+    color: #000; /* Change to the desired text color on hover */
+}

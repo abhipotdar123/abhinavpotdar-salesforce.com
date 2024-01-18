@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global">
+    <!-- Attribute Structure -->
+    <aura:attribute name="firstName" type="String" default="Abhinav"></aura:attribute>
+    
+    <!-- UI Implementation -->
+    <lightning:card footer="Card Footer" title="HasRecordID" class="slds-p-around_medium">
+    	My Name is {!v.firstName}
+        RecordID is {!v.recordId}
+    </lightning:card>
+    
+</aura:component>

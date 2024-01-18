@@ -1,0 +1,33 @@
+<template>
+    <div class="slds-box slds-theme_default">
+        <h2 class="slds-text-heading_medium">All Bugs</h2>
+        <template if:true={bugs.data}>
+            <lightning-datatable
+                key-field="Id"
+                data={bugs.data}
+                columns={columns}
+                onrowaction={handleRowAction}>
+            </lightning-datatable>
+            <lightning-layout>
+                <lightning-layout-item size="10">
+                    <lightning-button-group>
+                        <template for:each={pages} for:item="page">
+                            <lightning-button
+                                key={page.label}
+                                label={page.label}
+                                onclick={handlePageClick}
+                                >
+                            </lightning-button>
+                        </template>
+                    </lightning-button-group>
+                </lightning-layout-item>
+                <lightning-layout-item size="2">
+                    <lightning-button
+                        label="Close"
+                        onclick={handleClose}>
+                    </lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </template>
+    </div>
+</template>
