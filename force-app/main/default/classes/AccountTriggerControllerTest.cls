@@ -1,5 +1,6 @@
 @isTest
 private class AccountTriggerControllerTest {
+    
     @isTest
     static void testBeforeDelete() {
         
